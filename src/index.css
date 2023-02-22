@@ -1,16 +1,23 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
-
-body {
+body{
   font-family: 'Raleway';
-  background: url(./assets/diego-ph-qKAto00u4og-unsplash.jpg);
+  background-image: url(./assets/diego-ph-qKAto00u4og-unsplash.jpg);
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(15px);
+  margin:-0.1px;
+
 }
+
 
 .logoSvg {
   position: relative;
   top: 185px;
   right: -204px;
+  width:50%;
+
 }
 
 .btnPlay {
@@ -31,4 +38,9 @@ body {
   text-transform: lowercase;
   font-family: 'Raleway';
   font-style: normal;
+}
+
+.btnPlay:hover {
+  background-color: #D1D6E4;
+  ;
 }
