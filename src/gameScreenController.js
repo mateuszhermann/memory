@@ -16,6 +16,6 @@ ipcRenderer.on('cards-data-response', (event, data) => {
         console.log(cards);
         
     })
-    cards.sh
+    
 });
 
