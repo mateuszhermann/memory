@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow,ipcMain } = require('electron');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -13,11 +13,7 @@ const createWindow = () => {
       filename: "./mydb.sqlite"
     }
   });
-  knex.select().from('cards').then(rows=>{
-    rows.forEach(row =>{
-      console.log(row.path);
-    })
-  });
+  
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1440,
@@ -32,6 +28,17 @@ const createWindow = () => {
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
+
+  ipcMain.on('cards-data-request', async (event) => {
+    try {
+      const rows=knex.select().from('cards').then(rows=>{mainWindow.webContents.send('cards-data-response', rows);});
+      //console.log(rows);
+      
+    } catch (error) {
+      console.error(error);
+      event.reply('users-data-response', []);
+    }
+  });
 
 };
 
