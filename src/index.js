@@ -7,6 +7,17 @@ if (require('electron-squirrel-startup')) {
 }
 
 const createWindow = () => {
+  const knex = require('knex')({
+    client: 'better-sqlite3', // or 'better-sqlite3'
+    connection: {
+      filename: "./mydb.sqlite"
+    }
+  });
+  knex.select().from('cards').then(rows=>{
+    rows.forEach(row =>{
+      console.log(row.path);
+    })
+  });
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1440,
@@ -14,6 +25,8 @@ const createWindow = () => {
     resizable:false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true,
+      contextIsolation:false,
     },
   });
 
