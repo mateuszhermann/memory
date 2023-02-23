@@ -1,0 +1,99 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html{
+  background: url(./assets/diego-ph-qKAto00u4og-unsplash.jpg);
+}
+
+body{
+  font-family: 'Raleway';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(15px);
+  margin: -0.1px;
+}
+
+.logoSvg {
+  position: relative;
+  top: 185px;
+  right: -204px;
+}
+
+.btnPlay {
+  position:relative;
+  padding: 20px 100px 25px;
+  gap: 10px;
+  background: #7389D5;
+  border-radius: 10px;
+  top:163px;
+  left:569px;
+  border: none; 
+  color:white;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 47px;
+  text-transform: lowercase;
+  font-family: 'Raleway';
+  font-style: normal;
+}
+.main{
+  margin-top: 30px;
+  background-color: #FEF5FF;
+  display: flex;
+  width: 960px;
+  height: 640px;
+  padding: 70px, 60px, 70px, 60px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.tile{
+  float: left;
+    width: 185px;
+    height: 193px;
+}
+
+#tileDonut{
+  float: left;
+  width: 185px;
+  height: 193px;
+  text-align: center;
+}
+#tileDonut>img{
+  margin-top: 20px;
+
+}
+.headText{
+  font-family: 'Raleway';
+  font-size: 40px;
+  font-weight: 800;
+  color: #7389D5;
+  margin-bottom: 42px;
+}
+.backButton {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #7389D5;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.shadowText {
+  text-shadow: 0px 60px 24px rgba(0, 0, 0, 0.01), 0px 34px 20px rgba(0, 0, 0, 0.05), 0px 15px 15px rgba(0, 0, 0, 0.09), 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+.backButton:hover {
+  border: 3px dashed #7389D5;
+}

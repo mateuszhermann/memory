@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Memory Food</title>
+    <link rel="stylesheet" href="./chooseGame.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700;800&display=swap" rel="stylesheet">
+    <script src="./tileSwap.js" async></script>
+  </head>
+  <body>
+    <main class="main">
+        <div class="headText">
+            WYBIERZ ILOŚĆ PAR  
+        </div>
+        <div class="tileMenu">
+            <div class="tile" onmouseenter="swapT2()" onmouseleave="restoreT2()"><img id="t2"  src="./tiles/tileDefault_2.png"></div>
+            <div id="tileDonut"><img src="./tiles/tile_Donut.png"></div>
+            <div class="tile"><img id="t4" onmouseenter="swapT4()" onmouseleave="restoreT4()" src="./tiles/tileDefault_4.png"></div> <br>
+            <div class="tile"><img id="t6" onmouseenter="swapT6()" onmouseleave="restoreT6()" src="./tiles/tileDefault_6.png"></div>
+            <div class="tile"><img id="t9" onmouseenter="swapT9()" onmouseleave="restoreT9()" src="./tiles/tileDefault_9.png"></div>
+            <div class="tile"><img id="t12" onmouseenter="swapT12()" onmouseleave="restoreT12()" src="./tiles/tileDefault_12.png"></div>
+        </div>
+    </main>
+  </body>
+</html>
