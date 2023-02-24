@@ -6,6 +6,7 @@ let t12=document.getElementById("t12");
 
 function swapT2() {
     t2.src="./tiles/tileHover_2.png";
+
 }
 function restoreT2() {
     t2.src="./tiles/tileDefault_2.png";
@@ -37,4 +38,26 @@ function swapT12() {
 }
 function restoreT12() {
     t12.src="./tiles/tileDefault_12.png";
+}
+
+// Onclick
+function useT2() {
+    localStorage['pairCount'] = '2';
+    window.location.replace('./gameScreen.html');
+}
+function useT4() {
+    localStorage['pairCount'] = '4';
+    window.location.replace('./gameScreen.html');
+}
+function useT6() {
+    localStorage['pairCount'] = '6';
+    window.location.replace('./gameScreen.html');
+}
+function useT9() {
+    localStorage['pairCount'] = '9';
+    window.location.replace('./gameScreen.html');
+}
+function useT12() {
+    localStorage['pairCount'] = '12';
+    window.location.replace('./gameScreen.html');
 }
