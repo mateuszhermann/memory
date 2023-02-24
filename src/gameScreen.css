@@ -1,3 +1,39 @@
 body{
-    background-color: #7E91D3;
+    background-color: #C0CEFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 135.83px;
+}
+#gameArea{
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns:repeat(4,auto);
+    width: 600px;
+    margin-top:200px ;
+}
+a{
+    text-decoration: none;
+    color: #7389D5;
+    display: block;
+}
+.backrow{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    width: 100%;
+
+    /* shadow1 */
+
+    text-shadow: 0px 60px 24px rgba(0, 0, 0, 0.01), 0px 34px 20px rgba(0, 0, 0, 0.05), 0px 15px 15px rgba(0, 0, 0, 0.09), 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+
 }
