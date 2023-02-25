@@ -23,7 +23,10 @@ body{
   top: 185px;
   right: -204px;
 }
-
+a{
+  text-decoration: none;
+  color: #7389D5;
+}
 .btnPlay {
   position:relative;
   padding: 20px 100px 25px;
