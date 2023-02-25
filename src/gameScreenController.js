@@ -24,7 +24,6 @@ function endcheck(){
     Array.from(cards).forEach(card=>{
         if(card.getAttribute('src')!=bg){
             counter++;
-            console.log(`counter=${counter}`)
         };
         if(counter==limit){
             window.location.replace('./gameOver.html')
@@ -37,7 +36,6 @@ function activate(e){
     limiter.forEach(obj=>{
         if(card.alt==obj.card_id){
             card.src=obj.path;
-            console.log(active1+" "+active2);
         }
     })
     if(active1==null){
@@ -47,7 +45,6 @@ function activate(e){
         active2=card.alt;
         
         if(active1==active2){
-            console.log("marking");
             marked.push(card.alt);
         }
         endcheck();
@@ -87,18 +84,16 @@ ipcRenderer.on('cards-data-response', (event, data) => {
         cards.push(card);
         cards.push(card);
     })
-    console.log(cards);
-    limit=8;
+    let storage=JSON.parse(localStorage['pairCount']);
+    limit=storage*2;
     
     for(var i=0; i<limit;i++){
         limiter[i]=cards[i];
     };
     shuffle(limiter);
-    console.log(limiter);
 
     for(var i=0; i<limiter.length;i++){
         playmat.innerHTML+=`<img src='${bg}' alt='${limiter[i].card_id}' class='card' id='${i}'>`;
-        console.log('git');
     };
 
 
@@ -123,4 +118,3 @@ ipcRenderer.on('cards-data-response', (event, data) => {
     img.addEventListener('click', activate);
 });
 });
-
